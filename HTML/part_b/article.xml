@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE newspaper SYSTEM "newspaper.dtd">
+
+<newspaper>
+  <article>
+    <title>ISRO Launches Gaganyaan</title>
+    <author>Samarajit Mane</author>
+    <date>2025-06-16</date>
+    <category>Science</category>
+    <image>images/gaganyaan.jpg</image>
+    <content>
+      <p>ISRO successfully launched its crewed space mission Gaganyaan.</p>
+      <p>The astronauts will spend 7 days in space orbiting Earth.</p>
+    </content>
+  </article>
+
+  <article>
+    <title>India Wins T20 World Cup</title>
+    <author>Ritika Sharma</author>
+    <date>2025-06-15</date>
+    <category>Sports</category>
+    <image>https://news.site/images/india-wins.jpg</image>
+    <content>
+      <p>India defeated Australia in the final to win the T20 World Cup 2025.</p>
+      <p>Virat Kohli was declared Player of the Tournament.</p>
+    </content>
+  </article>
+</newspaper>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<students xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="student.xsd">
+
+  <student>
+    <regNo>BCA202501</regNo>
+    <name>Samarajit Mane</name>
+    <dob>2004-09-14</dob>
+    <mobile>9876543210</mobile>
+    <email>samarajit@example.com</email>
+    <course>BCA</course>
+    <year>1</year>
+  </student>
+
+  <student>
+    <regNo>BCA202502</regNo>
+    <name>Ritika Sharma</name>
+    <dob>2005-01-25</dob>
+    <mobile>9123456789</mobile>
+    <email>ritikasharma@example.com</email>
+    <course>BCA</course>
+    <year>1</year>
+  </student>
+
+</students>

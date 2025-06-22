@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Admission Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f1f6fb;
+      padding: 30px;
+    }
+    h1 {
+      text-align: center;
+      color: #003366;
+    }
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="number"],
+    textarea,
+    select {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="radio"],
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    .buttons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      border: none;
+      background-color: #005a87;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #003f63;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Student Admission Form</h1>
+  <form action="#" method="post">
+
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="phone">Phone Number:</label>
+    <input type="number" id="phone" name="phone" required>
+
+    <label>Gender:</label>
+    <input type="radio" name="gender" value="Male" required> Male
+    <input type="radio" name="gender" value="Female"> Female
+    <input type="radio" name="gender" value="Other"> Other
+
+    <label for="course">Select Course:</label>
+    <select id="course" name="course" required>
+      <option value="">--Select--</option>
+      <option value="bca">BCA</option>
+      <option value="bsc">B.Sc Computer Science</option>
+      <option value="bcom">B.Com</option>
+      <option value="bba">BBA</option>
+    </select>
+
+    <label>Languages Known:</label>
+    <input type="checkbox" name="lang" value="English"> English
+    <input type="checkbox" name="lang" value="Hindi"> Hindi
+    <input type="checkbox" name="lang" value="Marathi"> Marathi
+
+    <label for="address">Permanent Address:</label>
+    <textarea id="address" name="address" rows="4" required></textarea>
+
+    <div class="buttons">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </div>
+
+  </form>
+
+</body>
+</html>

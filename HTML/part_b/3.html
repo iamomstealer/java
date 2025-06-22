@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Built-in Objects</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h2>JavaScript Built-in Objects Example</h2>
+
+  <button onclick="showExamples()">Show Examples</button>
+
+  <pre id="output" style="background: #f0f0f0; padding: 15px; margin-top: 15px;"></pre>
+
+  <script>
+    function showExamples() {
+      let output = "";
+
+      // 1. Date Object
+      const now = new Date();
+      output += "1. Date Object:\n";
+      output += "Current Date and Time: " + now.toString() + "\n\n";
+
+      // 2. Math Object
+      output += "2. Math Object:\n";
+      output += "Random Number (0-1): " + Math.random().toFixed(2) + "\n";
+      output += "Square Root of 25: " + Math.sqrt(25) + "\n";
+      output += "Pi: " + Math.PI + "\n\n";
+
+      // 3. String Object
+      const message = "Hello, JavaScript!";
+      output += "3. String Object:\n";
+      output += "Original: " + message + "\n";
+      output += "Uppercase: " + message.toUpperCase() + "\n";
+      output += "Length: " + message.length + "\n\n";
+
+      // 4. Array Object
+      const fruits = ["Apple", "Banana", "Mango"];
+      output += "4. Array Object:\n";
+      output += "Original: " + fruits.join(", ") + "\n";
+      fruits.push("Orange");
+      output += "After push: " + fruits.join(", ") + "\n";
+      output += "Sorted: " + fruits.sort().join(", ") + "\n\n";
+
+      // 5. Number Object
+      const num = 123.456;
+      output += "5. Number Object:\n";
+      output += "Original: " + num + "\n";
+      output += "Fixed (2 decimal places): " + num.toFixed(2) + "\n";
+
+      // Display output
+      document.getElementById("output").textContent = output;
+    }
+  </script>
+
+</body>
+</html>

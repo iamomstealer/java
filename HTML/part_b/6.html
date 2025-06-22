@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Page with Validation</title>
+</head>
+<body style="font-family: Arial; padding: 20px; max-width: 400px; margin: auto;">
+
+  <h2>Login Form</h2>
+
+  <form onsubmit="return validateLogin()">
+    <label>Email:</label><br>
+    <input type="text" id="email" required><br><br>
+
+    <label>Password:</label><br>
+    <input type="password" id="password" required><br><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <p id="errorMsg" style="color: red; font-weight: bold;"></p>
+
+  <script>
+    function validateLogin() {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+      const errorMsg = document.getElementById("errorMsg");
+
+      // Clear previous errors
+      errorMsg.textContent = "";
+
+      // Email validation using regex
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errorMsg.textContent = "Invalid email format.";
+        return false;
+      }
+
+      // Password validation using regex (minimum 6 characters, at least one letter and one number)
+      const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/;
+      if (!passwordRegex.test(password)) {
+        errorMsg.textContent = "Password must be at least 6 characters and include letters and numbers.";
+        return false;
+      }
+
+      alert("Login successful!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>

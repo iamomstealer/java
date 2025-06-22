@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Information Form</title>
+</head>
+<body style="font-family: Arial; padding: 20px; max-width: 500px; margin: auto;">
+
+  <h2>Student Information Form</h2>
+
+  <form onsubmit="return validateForm()">
+    <label>Register Number:</label><br>
+    <input type="text" id="regNo" required><br><br>
+
+    <label>Name:</label><br>
+    <input type="text" id="name" required><br><br>
+
+    <label>Mobile Number:</label><br>
+    <input type="text" id="mobile" required><br><br>
+
+    <label>Date of Birth:</label><br>
+    <input type="date" id="dob" required><br><br>
+
+    <label>Email-ID:</label><br>
+    <input type="email" id="email" required><br><br>
+
+    <input type="submit" value="Submit">
+  </form>
+
+  <p id="errorMsg" style="color: red; font-weight: bold;"></p>
+
+  <script>
+    function validateForm() {
+      const regNo = document.getElementById("regNo").value.trim();
+      const name = document.getElementById("name").value.trim();
+      const mobile = document.getElementById("mobile").value.trim();
+      const dob = document.getElementById("dob").value;
+      const email = document.getElementById("email").value.trim();
+      const errorMsg = document.getElementById("errorMsg");
+
+      // Clear previous error
+      errorMsg.textContent = "";
+
+      // Register number length validation
+      if (regNo.length < 5 || regNo.length > 15) {
+        errorMsg.textContent = "Register number must be between 5 and 15 characters.";
+        return false;
+      }
+
+      // Mobile number validation
+      if (!/^\d{10}$/.test(mobile)) {
+        errorMsg.textContent = "Mobile number must be exactly 10 digits.";
+        return false;
+      }
+
+      // DOB check
+      if (!dob) {
+        errorMsg.textContent = "Please enter a valid Date of Birth.";
+        return false;
+      }
+
+      // Email format is handled by HTML5 'type=email', no need for custom check here
+
+      alert("Form submitted successfully!");
+      return true;
+    }
+  </script>
+
+</body>
+</html>

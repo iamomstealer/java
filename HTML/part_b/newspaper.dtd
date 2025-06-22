@@ -1,0 +1,12 @@
+<!ELEMENT newspaper (article+)>
+
+<!ELEMENT article (title, author, date, category, image?, content)>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT author (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT category (#PCDATA)>
+<!ELEMENT image (#PCDATA)>  <!-- URL or filename -->
+
+<!ELEMENT content (p+)>
+<!ELEMENT p (#PCDATA)>

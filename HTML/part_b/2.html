@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Events Example</title>
+</head>
+<body style="font-family: Arial; padding: 20px;">
+
+  <h2>JavaScript Event Handling Demo</h2>
+
+  <!-- 1. Click Event -->
+  <button id="clickBtn">Click Me</button>
+  <p id="clickResult"></p>
+
+  <!-- 2. Mouseover and 3. Mouseout Events -->
+  <div id="hoverBox" style="width: 200px; height: 100px; background-color: lightblue; margin: 10px 0; text-align: center; line-height: 100px;">
+    Hover over me
+  </div>
+
+  <!-- 4. Keydown Event -->
+  <input type="text" id="typeBox" placeholder="Type something..." />
+  <p id="keyResult"></p>
+
+  <!-- 5. Change Event -->
+  <select id="dropdown">
+    <option value="">Select a color</option>
+    <option value="Red">Red</option>
+    <option value="Blue">Blue</option>
+    <option value="Green">Green</option>
+  </select>
+  <p id="colorChoice"></p>
+
+  <script>
+    // 1. Click event
+    document.getElementById("clickBtn").addEventListener("click", function () {
+      document.getElementById("clickResult").innerText = "Button was clicked!";
+    });
+
+    // 2. Mouseover event
+    document.getElementById("hoverBox").addEventListener("mouseover", function () {
+      this.style.backgroundColor = "orange";
+      this.innerText = "Mouse is over me!";
+    });
+
+    // 3. Mouseout event
+    document.getElementById("hoverBox").addEventListener("mouseout", function () {
+      this.style.backgroundColor = "lightblue";
+      this.innerText = "Hover over me";
+    });
+
+    // 4. Keydown event
+    document.getElementById("typeBox").addEventListener("keydown", function (e) {
+      document.getElementById("keyResult").innerText = `You pressed: ${e.key}`;
+    });
+
+    // 5. Change event
+    document.getElementById("dropdown").addEventListener("change", function () {
+      const value = this.value;
+      document.getElementById("colorChoice").innerText = value ? `You selected: ${value}` : "";
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Frame Layout Demo</title>
+</head>
+<frameset rows="15%, 70%, 15%">
+    <!-- Header Frame -->
+    <frame src="header.html" name="headerFrame" noresize>
+    
+    <!-- Middle Section with Left and Right Frames -->
+    <frameset cols="30%, 70%">
+        <frame src="leftmenu.html" name="leftFrame">
+        <frame src="rightcontent.html" name="rightFrame">
+    </frameset>
+    
+    <!-- Status Bar Frame -->
+    <frame src="status.html" name="statusFrame" noresize>
+    
+    <noframes>
+        <body>
+            Your browser does not support frames.
+        </body>
+    </noframes>
+</frameset>
+</html>
